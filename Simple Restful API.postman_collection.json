@@ -1,0 +1,837 @@
+{
+	"info": {
+		"_postman_id": "30c7ef62-66ea-45ec-a094-73bafcc77702",
+		"name": "Simple Restful API",
+		"description": "The Post API Service is designed to facilitate seamless interaction with posts and user data. This API enables developers to create, update, retrieve, and delete post records, register and login users within the application\n\n#### **Key Features:**\n\n- **User Management:** Create and login user.\n    \n- **Post Management:** Manage post data with CRUD operations.\n    \n\n#### **Authentication:**\n\nLaravel Sanctum\n\n#### Base URL:\n\n[http://loclhost:8000/api](http://loclhost:8000/api)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37584024"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "create_new_user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/sanctum/token/register?name=ayowande&email=ayowande@tet.com&password=password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sanctum",
+								"token",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ayowande"
+								},
+								{
+									"key": "email",
+									"value": "ayowande@tet.com"
+								},
+								{
+									"key": "password",
+									"value": "password"
+								}
+							]
+						},
+						"description": "### Create a new User\n\nThis endpoint allows the creation of a new user\n\n#### Request Body\n\n- name\n    \n- email\n    \n- password\n    \n\n#### Response\n\nThe response will be a JSON object\n\nThe `data` object contains the user token."
+					},
+					"response": [
+						{
+							"name": "create_new_user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/sanctum/token/register?name=ayowande&email=ayowande@tet.co&password=password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"sanctum",
+										"token",
+										"register"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "ayowande"
+										},
+										{
+											"key": "email",
+											"value": "ayowande@tet.co"
+										},
+										{
+											"key": "password",
+											"value": "password"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:06:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:06:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"5|70kmhjntpIplP11aasbkCtMgqHnnb8wQFRBX6xuI10b4f793\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login_user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/sanctum/token/?email=ayowande@tet.com&password=password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sanctum",
+								"token",
+								""
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "ayowande@tet.com"
+								},
+								{
+									"key": "password",
+									"value": "password"
+								}
+							]
+						},
+						"description": "### Login User\n\nThis endpoint allows the creation of a new user\n\n#### Request Body\n\n- email\n    \n- password\n    \n\n#### Response\n\nThe response will be a JSON object\n\nThe `data` object contains the user token."
+					},
+					"response": [
+						{
+							"name": "login_user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/sanctum/token/?email=ayowande@tet.com&password=password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"sanctum",
+										"token",
+										""
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "ayowande@tet.com"
+										},
+										{
+											"key": "password",
+											"value": "password"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:06:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:06:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"6|8UYn85hTzvelQlVNQOLBiJRohlipZvHcCGHHHN389e0f8918\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "create_post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|eJVAc3iyUXCS1TB4eaqpNgPRJJxBjFjU2nUWpoGHcb1646d9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/posts?title=title&content=contenttest111",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "title"
+								},
+								{
+									"key": "content",
+									"value": "contenttest111"
+								}
+							]
+						},
+						"description": "### Create Post\n\nThis endpoint allows the creation of a new post.\n\n#### Request Body\n\n- `title` (string): The name of the post.\n    \n- `content` (string): The body of the post.\n    \n\n#### Response\n\nThe response will contain the details of the newly created post, including the title, content, user_id, `updated_at`, `created_at`, and `id`.\n\nExample:\n\n``` json\n{\"title\":\"title\",\"content\":\"contenttest111\",\"user_id\":2,\"updated_at\":\"2025-01-17T10:48:51.000000Z\",\"created_at\":\"2025-01-17T10:48:51.000000Z\",\"id\":1}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "create_post_output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/posts?title=title&content=contenttest111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "title"
+										},
+										{
+											"key": "content",
+											"value": "contenttest111"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:05:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:05:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"title\",\n    \"content\": \"contenttest111\",\n    \"user_id\": 2,\n    \"updated_at\": \"2025-01-17T11:05:13.000000Z\",\n    \"created_at\": \"2025-01-17T11:05:13.000000Z\",\n    \"id\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "all_posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|eJVAc3iyUXCS1TB4eaqpNgPRJJxBjFjU2nUWpoGHcb1646d9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts"
+							]
+						},
+						"description": "### Get Posts\n\nThe endpoint makes an HTTP GET request to retrieve a list of posts from the server. The response is in the form of a JSON schema and includes an array of post objects, each containing the following properties:\n\n- id (number): The unique identifier for the post.\n    \n- title (string): The name of the post.\n    \n- content (string): The content of the post.\n    \n- created_at (string): The timestamp indicating the creation date of the post record.\n    \n- updated_at (string): The timestamp indicating the last update date of the post record."
+					},
+					"response": [
+						{
+							"name": "all_posts_output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:05:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:05:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"title\": \"cokeii\",\n        \"content\": \"updatecontent\",\n        \"created_at\": \"2025-01-17T10:48:51.000000Z\",\n        \"updated_at\": \"2025-01-17T11:00:29.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"user_id\": 2,\n        \"title\": \"title\",\n        \"content\": \"contenttest111\",\n        \"created_at\": \"2025-01-17T10:52:00.000000Z\",\n        \"updated_at\": \"2025-01-17T10:52:00.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"user_id\": 2,\n        \"title\": \"title\",\n        \"content\": \"contenttest111\",\n        \"created_at\": \"2025-01-17T10:52:23.000000Z\",\n        \"updated_at\": \"2025-01-17T10:52:23.000000Z\"\n    },\n    {\n        \"id\": 4,\n        \"user_id\": 2,\n        \"title\": \"title\",\n        \"content\": \"contenttest111\",\n        \"created_at\": \"2025-01-17T10:53:14.000000Z\",\n        \"updated_at\": \"2025-01-17T10:53:14.000000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "show_post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|eJVAc3iyUXCS1TB4eaqpNgPRJJxBjFjU2nUWpoGHcb1646d9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/posts/1?Accept=application/json&Content-Type=application/json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"1"
+							],
+							"query": [
+								{
+									"key": "Accept",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							]
+						},
+						"description": "### Show Post\n\nThis endpoint retrieves the details of a specific post.\n\n#### Request\n\n- Method: GET\n    \n- Endpoint: `http://localhost:8000/api/posts/1`\n    \n\n#### Response\n\nThe response will be a JSON object with the following schema:\n\n``` json\n{\n    \"id\": 1,\n    \"user_id\": 2,\n    \"title\": \"title\",\n    \"content\": \"contenttest111\",\n    \"created_at\": \"2025-01-17T10:48:51.000000Z\",\n    \"updated_at\": \"2025-01-17T10:48:51.000000Z\",\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"ayowande\",\n        \"email\": \"ayowande@tet.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-01-17T10:40:59.000000Z\",\n        \"updated_at\": \"2025-01-17T10:40:59.000000Z\"\n    }\n}\n\n ```\n\nThe `data` object contains the post details including `id`, title, content, `created_at`, and `updated_at`."
+					},
+					"response": [
+						{
+							"name": "show_post_output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/posts/1?Accept=application/json&Content-Type=application/json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts",
+										"1"
+									],
+									"query": [
+										{
+											"key": "Accept",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:04:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:04:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"user_id\": 2,\n    \"title\": \"cokeii\",\n    \"content\": \"updatecontent\",\n    \"created_at\": \"2025-01-17T10:48:51.000000Z\",\n    \"updated_at\": \"2025-01-17T11:00:29.000000Z\",\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"ayowande\",\n        \"email\": \"ayowande@tet.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-01-17T10:40:59.000000Z\",\n        \"updated_at\": \"2025-01-17T10:40:59.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update_post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|eJVAc3iyUXCS1TB4eaqpNgPRJJxBjFjU2nUWpoGHcb1646d9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/posts/1?title=cokeii&content=updatecontent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"1"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "cokeii"
+								},
+								{
+									"key": "content",
+									"value": "updatecontent"
+								}
+							]
+						},
+						"description": "### Update Post Details\n\nThis endpoint is used to update the details of a specific post.\n\n#### Request Body Parameters\n\n- title (string, required): The updated name of the post.\n    \n- content (string, required): The updated content of the post.\n    \n\n#### Response\n\nUpon a successful update, the response will include the updated details of the post:\n\n``` json\n{\n    \"id\": 1,\n    \"user_id\": 2,\n    \"title\": \"cokeii\",\n    \"content\": \"updatecontent\",\n    \"created_at\": \"2025-01-17T10:48:51.000000Z\",\n    \"updated_at\": \"2025-01-17T11:00:29.000000Z\",\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"ayowande\",\n        \"email\": \"ayowande@tet.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-01-17T10:40:59.000000Z\",\n        \"updated_at\": \"2025-01-17T10:40:59.000000Z\"\n    }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "update_post_output",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/posts/1?title=cokeii&content=updatecontent",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts",
+										"1"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "cokeii"
+										},
+										{
+											"key": "content",
+											"value": "updatecontent"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:04:19 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:04:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"user_id\": 2,\n    \"title\": \"cokeii\",\n    \"content\": \"updatecontent\",\n    \"created_at\": \"2025-01-17T10:48:51.000000Z\",\n    \"updated_at\": \"2025-01-17T11:00:29.000000Z\",\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"ayowande\",\n        \"email\": \"ayowande@tet.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-01-17T10:40:59.000000Z\",\n        \"updated_at\": \"2025-01-17T10:40:59.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete_post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|eJVAc3iyUXCS1TB4eaqpNgPRJJxBjFjU2nUWpoGHcb1646d9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/posts/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"4"
+							]
+						},
+						"description": "### Delete Post\n\nThis endpoint is used to delete a specific post.\n\n#### Request\n\n- Method: DELETE\n    \n- Endpoint: `http://localhost:8000/api/posts/1`\n    \n\n#### Response\n\nThe response for this request is a JSON schema that represents the deleted post's details."
+					},
+					"response": [
+						{
+							"name": "delete_post_output",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/posts/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts",
+										"4"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:07:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 11:07:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
